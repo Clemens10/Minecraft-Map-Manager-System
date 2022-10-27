@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a435f0-7618-459a-a3e9-0b8c51f51b9a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/de/clemens/config/MapConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/de/clemens/events/SetupFinishEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/de/clemens/events/SetupStartEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/de/clemens/exception/SetupException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/de/clemens/exception/SetupFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/de/clemens/map/util/SerializedLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/de/clemens/map/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/de/clemens/map/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/de/clemens/map/setup/MapSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/de/clemens/map/setup/MapSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-    </list>
+    <list default="true" id="36a435f0-7618-459a-a3e9-0b8c51f51b9a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666863358143</updated>
       <workItem from="1666863360786" duration="6232000" />
-      <workItem from="1666881995136" duration="331000" />
+      <workItem from="1666881995136" duration="748000" />
     </task>
     <servers />
   </component>
