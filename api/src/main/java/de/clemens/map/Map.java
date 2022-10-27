@@ -1,22 +1,31 @@
 package de.clemens.map;
 
-import com.google.common.collect.Lists;
+import de.clemens.saves.serializer.LocationSerializer;
+import lombok.Getter;
+import lombok.Setter;
 import org.bukkit.Location;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Map {
 
     private final String name;
+    @Getter
+    private final String description;
+    @Getter
+    private final String author;
+
     private final List<Location> spawnLocations;
 
 
     // Constructor for initializing a new map
-    public Map(String name, Location defaultLocation) {
+    public Map(String name, Location defaultLocation, String description, String author) {
+
         this.name = name;
         this.spawnLocations = List.of(defaultLocation);
+        this.description = description;
+        this.author = author;
+
     }
 
     //Getter for the name of the map
