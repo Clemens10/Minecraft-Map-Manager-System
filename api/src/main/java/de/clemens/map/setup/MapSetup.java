@@ -15,7 +15,9 @@ import org.bukkit.entity.Player;
 import java.io.File;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class MapSetup {
 
@@ -27,6 +29,8 @@ public class MapSetup {
 
     @Getter
     private final Map map;
+    @Getter
+    ArrayList<SerializedLocation> serializedLocations = new ArrayList<>();
 
     public MapSetup(Player player, String mapName, Location defaultSpawn, String description, String author) {
 
@@ -44,8 +48,6 @@ public class MapSetup {
 
         player.teleport(new Location(Bukkit.getWorld(world), 0, 0, 0));
 
-        ArrayList<SerializedLocation> serializedLocations = new ArrayList<>();
-
         //Converts the locations to serialized locations
 
         for(int i = 0; i < spawnLocations.size(); i++) {
@@ -53,12 +55,26 @@ public class MapSetup {
             serializedLocations.add(new SerializedLocation(current.getWorld().getName(), current.getX(), current.getY(), current.getZ(), current.getYaw(), current.getPitch()));
         }
 
+        //TODO: Filecheck
+        checkIfWorldIsInitialized("api/worlds/" + world);
 
-        config = new JsonConfig(new File("frames/config", "core-database-module.json"), c ->
-                c.set("core-database-module", new MapConfig(mapName, getMap().getAuthor(), getMap().getDescription(), serializedLocations))).
-                get("core-database-module", (Type) MapConfig.class);
 
         Bukkit.getPluginManager().callEvent(new SetupStartEvent(player, this));
+    }
+
+    //Checks if the worlds contains the infos for the map e.g. creates the setup files
+    public Optional<Boolean> checkIfWorldIsInitialized(String world) {
+        File check = new File("api/worlds/" + world);
+        ArrayList<File> files = new ArrayList<>(Arrays.asList(check.listFiles()));
+        if (files.contains("info.json")) {
+            return Optional.of(true);
+        } else {
+            config = new JsonConfig(new File("api/worlds/" + Bukkit.getWorld(world), "info.json"), c ->
+                    c.set("info", new MapConfig(mapName, getMap().getAuthor(), getMap().getDescription(), getSerializedLocations()))).
+                    get("info", (Type) MapConfig.class);
+            Bukkit.getLogger().info("Created new info.json for world " + world);
+            return Optional.of(false);
+        }
     }
 
     public boolean save() throws SetupFailedException {

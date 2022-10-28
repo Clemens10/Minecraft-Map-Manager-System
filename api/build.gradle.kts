@@ -3,8 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.lombok") version "1.7.20"
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "de.clemens"
+version = "0.0.0-BETA"
 
 repositories {
     mavenCentral()
