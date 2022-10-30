@@ -1,8 +1,6 @@
 package de.clemens.map;
 
-import de.clemens.saves.serializer.LocationSerializer;
 import lombok.Getter;
-import lombok.Setter;
 import org.bukkit.Location;
 
 import java.util.List;
