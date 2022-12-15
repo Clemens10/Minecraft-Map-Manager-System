@@ -1,6 +1,3 @@
-rootProject.name = "Minecraft-Map-Mangager-System"
+rootProject.name = "Minecraft-Map-Manager-System"
 include("api")
-include("demo")
-include("api")
-include("demo")
 include("demo")
